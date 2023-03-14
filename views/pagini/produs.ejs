@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <%- include("../fragmente/head.ejs") %> 
+        <link rel="stylesheet" href="/resurse/CSS/produs.css" type="text/css" />
+        <link href="/resurse/CSS/produs.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+    <%- include("../fragmente/header.ejs") %>
+
+    <main>
+       
+        <section>
+                <article id="art-produs">
+                    <figure class="imag-produs">
+                        <img  src="/resurse/images/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.title %>]" />
+                    </figure>
+                    <div class="produstext">
+                        <h3 style="text-align: center;"><span class="nume"><%- locals.prod.title %></span></h3>
+                        <p style="float: right;">by <span class="descriere"><%- locals.prod.author %> </span></p>
+                        <p>Price: <span class="pret"><%- locals.prod.price %> $</span></p>
+                        <p><span class="gramaj"><%- locals.prod.about %> </span></p>
+                        <p>Category: <span class="categorie"><%- locals.prod.category %> </span></p>
+                        <p>Type: <span class="pt_diabetici"><%- locals.prod.product_type %> </span></p>
+                        <p>Date added: <span class="categorie"><%- locals.prod.adding_date %> </span></p>
+                    </div>
+                        
+                </article>
+                <div class="spatierebuton"><a class="linkuri" href="/produse"><i class="fa-solid fa-arrow-left"></i> Back to Shop</a></div>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer.ejs") %>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <title>Error</title>
+        <meta name = "keywords" content = "hostel, flight, vacantion, trip, travel, blog, personal blog, 
+        plane tickets, travel agency, travel tips, airlines, fare, cheap fare,
+        destination, blog, solo travel, vaca tion packages, budget travel">
+        <meta name = "description" content = "This travel blog is an online 
+        travel guide completed with travel stories, tips and photographs. 
+        Check out our online store for the best maps and travel guiding books!">
+        <%- include("../fragmente/head.ejs")%>
+        <link rel="stylesheet" href="resurse/CSS/eroare.css" type="text/css"> 
+    </head>
+    <body>
+        
+        <%- include("../fragmente/header.ejs") %> 
+
+        <main>
+            <div id="err-coloane">
+                <div id="err-imag">
+                    <img src="<%- locals.imagine %>" />
+                </div>
+                <section>
+                    <h2><%- locals.titlu %></h2>
+                    <h2><%- locals.text %></h2>
+                </section>
+            </div>
+        </main>
+        
+        <%- include("../fragmente/footer.ejs")%> 
+
+
+    </body>
+</html>

@@ -1,0 +1,158 @@
+body {
+  --menu-height: 50px;
+  --menu-text-color: antiquewhite;
+  --button-width: 200px;
+  --menu-color: #252525;
+  --menu-color-selected:#252525;
+  --menu-text-color-selected: #f97950;
+  --menu-bord-width:1px;
+  --menu-button-border-color:#252525;
+  --menu-border-radius-size: 8px;
+}
+
+ul.meniu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  /* top: 14%;
+  left: 49%; */
+  /* transform: translate(-50%, -50%); */
+  justify-content: center;
+  width: 100%;
+}
+ul.meniu li a {
+  display: block;
+  height: 100%;
+}
+ul.meniu > li {
+  height: var(--menu-height);
+  overflow: hidden;
+  line-height: var(--menu-height);
+  vertical-align: middle;
+  /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+  /* border-bottom-right-radius: var(--menu-border-radius-size);
+  border-bottom-left-radius: var(--menu-border-radius-size);
+  border-top-right-radius: var(--menu-border-radius-size);
+  border-top-left-radius: var(--menu-border-radius-size);
+  border-collapse: separate; */
+  width: var(--button-width);
+  text-align: center;
+}
+ul.meniu > li:hover {
+  overflow: visible;
+}
+ul.meniu > li:hover ul {
+  -webkit-animation-name: animatiesubmeniu;
+          animation-name: animatiesubmeniu;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transform-origin: 50% 0;
+  opacity: 0.5;
+  display: block;
+}
+ul.meniu ul {
+  list-style-type: none;
+  z-index: 10;
+  position: relative;
+  left: -1px;
+  padding: 0;
+  margin: 0;
+  transform: scale(0, 0);
+  display: none;
+}
+ul.meniu ul li {
+  height: var(--menu-height);
+  /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+  width: var(--button-width);
+}
+ul.meniu a, ul.meniu div {
+  color: var(--menu-text-color);
+  text-decoration: none;
+  background-color: var(--menu-color);
+  cursor: pointer;
+  font-weight: bold;
+  /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+  /* border-bottom-right-radius: var(--menu-border-radius-size);
+  border-bottom-left-radius: var(--menu-border-radius-size);
+  border-top-right-radius: var(--menu-border-radius-size);
+  border-top-left-radius: var(--menu-border-radius-size);
+  border-collapse: separate; */
+}
+
+ul.meniu a:hover, ul.meniu div:hover {
+  background-color: var(--menu-color-selected);
+  color: var(--menu-text-color-selected);
+  transition: color 1s linear;
+  font-weight: bold;
+  /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+  /* border-bottom-right-radius: var(--menu-border-radius-size);
+  border-bottom-left-radius: var(--menu-border-radius-size);
+  border-top-right-radius: var(--menu-border-radius-size);
+  border-top-left-radius: var(--menu-border-radius-size);
+  border-collapse: separate; */
+}
+
+@-webkit-keyframes animatiesubmeniu {
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes animatiesubmeniu {
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+nav {
+  height: var(--menu-height);
+  background-color: var(--menu-color);
+  display: flex;
+  overflow: visible;
+  width: 100%;
+  top:100px;
+  position:absolute;
+}
+
+body>header{
+  background-color: #252525;
+  height: 150px;
+  width: 100%;
+  margin:0;
+}
+
+.logoheader img{
+  height:100px;
+  display: block;
+  margin-left: 4vw;
+  margin-right: auto;
+  animation-name: spinning;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    /* linear | ease | ease-in | ease-out | ease-in-out */
+    animation-timing-function: linear;
+}
+
+@keyframes spinning {
+  from { transform: rotate(360deg) }
+  to { transform: rotate(0deg) }
+}
+
+#hamburger, #ch-menu {
+  display: none;
+}/*# sourceMappingURL=nav.css.map */

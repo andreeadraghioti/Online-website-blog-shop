@@ -1,0 +1,41 @@
+{
+    "cale_baza": "resurse/images/erori",
+    "eroare_default":{
+        "titlu":"ERROR",
+        "text": "An error occured",
+        "imagine":"eroare_default.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404",
+            "text": "SORRY! We couldn't find that page!",
+            "imagine":"404.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403",
+            "text": "Forbidden access",
+            "imagine":"403.png"
+        },
+        
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"SORRY",
+            "text": "Work in progress!",
+            "imagine":"1.png"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Database error",
+            "text": "Come back later!",
+            "imagine":"2.png"
+        }
+    ]
+}
+  

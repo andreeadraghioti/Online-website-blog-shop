@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../fragmente/head.ejs")%>
+        <title>Never Ending Footsteps</title>
+        <meta name = "keywords" content = "hostel, flight, vacantion, trip, travel, blog, personal blog, 
+        plane tickets, travel agency, travel tips, airlines, fare, cheap fare,
+        destination, blog, solo travel, vaca tion packages, budget travel">
+        <meta name = "description" content = "This travel blog is an online 
+        travel guide completed with travel stories, tips and photographs. 
+        Check out our online store for the best maps and travel guiding books!">
+    </head>
+    <body>
+        <%- include("../fragmente/header.ejs")%>
+        <main>
+            <section id="galerie_statica">
+                <div class="spatierebuton"><a class="linkuri" href="/index"><i class="fa-solid fa-arrow-left"></i> Back to Home</a></div>
+
+                <div id="grid-galerie">
+                    <% for(let imag of locals.imagini) {
+                        var d=new Date();
+                        var v_luni=["ianuarie", "februarie", "martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+                        var luna_r=v_luni[d.getMonth()]
+                        if (imag.luni && imag.zile && imag.luni.includes(luna_r) && imag.zile.includes(d.getDate())) { %>
+                            <div class="poza-galerie-statica" style="background-color: var(--color2);">
+                                <figure>
+                                    <picture>
+                                        <source srcset="<%- imag.fisier_mediu%>" media="(max-width: 500px)"/>
+                                        <img src="<%- imag.fisier%>" alt="<%- imag.alt%>"/>
+                                    </picture>
+                                    <figcaption><%- imag.descriere%></figcaption>
+                                </figure>
+                            </div>
+                            <div class="spatiu-galerie-statica"></div>
+                        <% } %>
+                        <% if (!imag.luni && !imag.zile) {%>
+                            <div class="poza-galerie-statica">
+                                <figure>
+                                    <picture>
+                                        <source srcset="<%- imag.fisier_mediu%>" media="(max-width: 500px)"/>
+                                        <img src="<%- imag.fisier%>" alt="<%- imag.alt%>"/>
+                                    </picture>
+                                    <figcaption><%- imag.descriere%></figcaption>
+                                </figure>
+                            </div>
+                            <div class="spatiu-galerie-statica"></div>
+                            <% } %>
+                   <% } %>
+                </div>
+                
+            </section>
+
+        </main>
+        <%- include("../fragmente/footer.ejs")%>
+    </body>
+</html>

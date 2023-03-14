@@ -1,0 +1,567 @@
+body {
+  --border-size: 10px;
+  --border-radius-size: 30px;
+  --spacing: 5%;
+  --light-border-color: whitesmoke;
+  --light-background-body: antiquewhite;
+  --dark-background-body:#252525;
+  --light-text-color: #252525;
+  --dark-text-color:antiquewhite;
+  --color1:#ffd541;
+  --color2:#f97950;
+  --color3:#d8deb6;
+  --dark-color1: #987600;
+  --dark-color2:#962805;
+  --dark-color3:#77813a;
+  background-color: var(--light-background-body);
+  color: var(--light-text-color);
+  font-family: "Raleway";
+  --padding-sections: 4%;
+  --padding-about:5%;
+  --black: black;
+
+}
+
+body.dark {
+  background-color: var(--dark-background-body);
+  color: var(--dark-text-color);
+  --color1:#f1cc56;
+  --color2:#e1653e;
+  --color3:#8a8e75;
+  --light-background-body: var(--dark-background-body);
+  --light-text-color: var(--dark-text-color);
+  --black: white;
+}
+/* 
+body.dark main {
+  background-color: var(black);
+} */
+
+main {
+  margin-left: var(--spacing);
+  margin-right: var(--spacing);
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+#grid-pagina {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "z-about z-about z-about z-about" 
+                        "z-about z-about z-about z-about" 
+                        "z-maps z-maps z-travelbooks z-travelbooks" 
+                        "z-portraitsofindia z-hundertwasserexperience z-hundertwasserexperience z-southwesterndesertofjordan" 
+                        "z-calendar z-calendar z-resources z-resources" 
+                        "z-galerie-animata z-galerie-animata z-resources z-resources" 
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-galerie-animata z-galerie-animata z-resources z-resources"
+                        "z-cinematictravel z-cinematictravel z-cinematictravel z-cinematictravel" 
+                        "z-faq z-faq z-faq z-faq";
+}
+
+#grid-pagina > * {
+  border-width: var(--border-size);
+  border-style: solid;
+  border-color: var(--light-background-body);
+  border-bottom-right-radius: var(--border-radius-size);
+  border-bottom-left-radius: var(--border-radius-size);
+  border-top-right-radius: var(--border-radius-size);
+  border-top-left-radius: var(--border-radius-size);
+  border-collapse: separate;
+  /*overflow: hidden;*/
+  /*perspective: 1px;*/
+  line-height: 1.8em;
+}
+
+#about {
+  grid-area: z-about;
+  background-color: var(--color2);
+  overflow: hidden;
+}
+
+#maps {
+  grid-area: z-maps;
+  background-color: var(--color1);
+  padding: var(--padding-sections);
+  text-align: center;
+}
+#maps:hover{
+  grid-area: z-maps;
+  background: var(--color1);
+  /* background: linear-gradient(to left, var(--light-background-body), var(--color1)); */
+  padding: var(--padding-sections);
+  border-width: 5px;
+  border-color: var(--light-background-body);
+  text-align: center;
+}
+
+#travelbooks {
+  grid-area: z-travelbooks;
+  background-color: var(--color1);
+  padding: var(--padding-sections);
+  text-align: center;
+}
+#travelbooks:hover{
+  grid-area: z-travelbooks;
+  background: var(--color1);
+  /* background: linear-gradient(to left, var(--light-background-body), var(--color1)); */
+  padding: var(--padding-sections);
+  border-width: 5px;
+  border-color: var(--light-background-body);
+  text-align: center;
+}
+
+#portraitsofindia {
+  grid-area: z-portraitsofindia;
+  background-color: var(--color3);
+  padding: var(--padding-sections);
+}
+
+#hundertwasserexperience {
+  grid-area: z-hundertwasserexperience;
+  background-color: var(--color3);
+  padding: var(--padding-sections);
+  margin:0;
+}
+
+#southwesterndesertofjordan {
+  grid-area: z-southwesterndesertofjordan;
+  background-color: var(--color3);
+  padding: var(--padding-sections);
+}
+
+#resources {
+  grid-area: z-resources;
+  background-color: var(--color2);
+  padding: var(--padding-sections);
+}
+
+#cinematictravel {
+  grid-area: z-cinematictravel;
+  background-color: var(--color3);
+  padding: var(--padding-sections);
+}
+
+#calendar {
+  grid-area: z-calendar;
+  background-color: var(--color1);
+  padding: var(--padding-sections);
+}
+
+#galerie-animata {
+  grid-area: z-galerie-animata;
+  background-color: var(--color1);
+  /* padding: var(--padding-sections); */
+}
+
+#faq {
+  grid-area: z-faq;
+  background-color: var(--color2);
+  padding: var(--padding-sections);
+}
+
+@media screen and (max-width: 1200px) {
+  #grid-pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "z-about z-about"
+                          "z-maps z-travelbooks" 
+                          "z-portraitsofindia z-portraitsofindia" 
+                          "z-hundertwasserexperience z-hundertwasserexperience" 
+                          "z-southwesterndesertofjordan z-southwesterndesertofjordan" 
+                          "z-resources z-resources" 
+                          "z-calendar z-calendar" 
+                          "z-cinematictravel z-cinematictravel"
+                          "z-faq z-faq";
+  }
+}
+@media screen and (max-width: 700px) {
+  #grid-pagina {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "z-about"
+                          "z-maps"
+                          "z-travelbooks"
+                          "z-portraitsofindia"
+                          "z-hundertwasserexperience"
+                          "z-southwesterndesertofjordan"
+                          "z-resources"
+                          "z-calendar"
+                          "z-cinematictravel"
+                          "z-faq";
+  }
+}
+/* unvisited link */
+a:link {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* visited link */
+a:visited {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--light-text-color) !important;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* selected link */
+a:active {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sectionauthor img{
+  margin:0;
+  width: 40vw;
+  float: left;
+  padding: var(--padding-sections);
+}
+.text>h3{
+  padding-top: 0;
+  margin-top: 0;
+}
+.sectiongoalofblog img{
+  margin:0;
+  width: 40vw;
+  float: right;
+  padding: var(--padding-sections);
+}
+.text{
+  margin:0;
+  padding: var(--padding-sections);
+}
+#portraitsofindia img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#hundertwasserexperience img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#southwesterndesertofjordan img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#portraitsofindia figcaption{
+  text-align: center;
+}
+#hundertwasserexperience figcaption{
+  text-align: center;
+}
+#southwesterndesertofjordan figcaption{
+  text-align: center;
+}
+#cinematictravel iframe{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.a-container a{
+  display: block;
+  text-align: center;
+  width:150px;
+  height:auto;
+  padding: 5%;
+  border-style: double;
+  border-width: 5px;
+  border-color: darkslategrey;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-collapse: separate;
+  border-left: none;
+  color:darkslategrey;
+  background-color: var(--color3);
+}
+.a-container a:hover{
+  font-weight: bold;
+  background-color: var(--color3);
+  -webkit-animation-name: iframeanimation;
+  animation-name: iframeanimation;
+  -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  transform-origin: 50% 0;
+}
+.flex-container{
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: center;
+}
+@keyframes iframeanimation {
+  0% {
+    width:100%;
+  }
+  100% {
+    width:120%;
+  }
+} 
+/* transition all 1s linear */
+
+/* FOOTER */
+body>footer{
+  background-color: #252525;
+  color: antiquewhite;
+  margin: 0 auto;
+  padding: var(--padding-sections);
+}
+/* unvisited link */
+body>footer a:link {
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* visited link */
+body>footer a:visited {
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* mouse over link */
+body>footer a:hover {
+  color: lightgrey;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* selected link */
+body>footer a:active {
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: bold;
+}
+HTML, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+
+.back-to-top {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--black);
+  background-color: var(--light-background-body);
+  font-size: x-large;
+  text-align: center;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--light-background-body);
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-collapse: separate;
+  box-shadow: 0 0 15px var(--light-background-body);
+}
+.back-to-top:hover{
+  -webkit-animation-name: myanim;
+          animation-name: myanim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transform-origin: 50% 0;
+}
+@keyframes myanim {
+  0% {
+    box-shadow: 0 0 15px var(--light-background-body);
+  }
+  100% {
+    box-shadow: 0 0 15px darkgrey;
+    opacity: 1;
+  }
+}  
+.back-to-top a:link {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* visited link */
+.back-to-top a:visited {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* mouse over link */
+.back-to-top a:hover {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* selected link */
+.back-to-top a:active {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* .flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+} */
+
+.video>video{
+  display: block;
+  margin: auto;
+}
+::cue{
+  /* background-image: linear-gradient(#252525, var(--color2)); */
+  font-style:bold;
+  font-size: larger;
+  /* background-color: linear-gradient(red, yellow); */
+  color:antiquewhite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0px 0px 10px var(--color2);
+ } 
+
+.linkuri{
+  background-color: var(--light-text-color);
+  color:var(--light-background-body) !important;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--light-text-color);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-collapse: separate;
+  padding:6px;
+}
+.linkuri:hover{
+  color: var(--light-text-color) !important;
+  font-weight: bold !important;
+  border-width:3px;
+  border-style: solid;
+  border-color: var(--light-background-body);
+  background-color: var(--light-background-body);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-collapse: separate;
+  padding: 6px;
+  font-weight: bold !important;
+}
+.spatierebuton{
+  margin:5%;
+}
+
+.containergalerieanimata{
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+ #tema{
+  color: var(--light-text-color);
+  background-color: var(--light-background-body);
+  border: none;
+  font-size: x-large;
+  margin: 20px;
+  float: right;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--light-background-body);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-collapse: separate;
+  padding: 0 !important;
+  margin-right: 4vw;
+ }
+
+ #banner{
+  color:var(--light-background-body);
+  background-color: var(--light-text-color);
+  position: fixed;
+  padding: 5%;
+  padding-bottom: 0 !important;
+  font-size: large;
+  max-width: 40vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--light-text-color);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-collapse: separate;
+  z-index:999;
+  
+ }
+ #ok_cookies{
+  color: var(--light-text-color);
+  font-weight: 400;
+  background-color: var(--light-background-body);
+  border: none;
+  font-size: large;
+  margin: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--light-background-body);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-collapse: separate;
+  padding: 0 !important;
+  margin-right: 4vw;
+ }
+ #ok_cookies:hover{
+  color: var(--light-background-body);
+  background-color: var(--light-text-color);
+  border-color: var(--light-text-color);
+ }

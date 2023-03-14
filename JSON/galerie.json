@@ -1,0 +1,65 @@
+{
+	"cale_galerie":"resurse/images/galeriestatica",
+	"imagini": [
+		{
+			"fisier":"gs1.jpg",
+			"descriere":"Hundertwasser experience, in Leipzig"
+		},
+		{
+			"fisier":"valentinesday1.jpg",
+			"descriere":"Life has taught us that love does not consist in gazing at each other, but in looking together in the same direction. – Antoine de Saint-Exupér",
+			"alt":"poza",
+			"luni":["februarie"],
+			"zile":[14]
+		},
+		{
+			"fisier":"gs2.jpg",
+			"descriere":"Werk in progress, Leipzig"
+			
+		},
+		{
+			"fisier":"valentinesday2.jpg",
+			"descriere":"Actually, the best gift you could have given her was a lifetime of adventures. – Lewis Carroll",
+			"alt":"poza",
+			"luni":["februarie"],
+			"zile":[14]
+		},
+		{
+			"fisier":"gs3.jpg",
+			"descriere":"India"
+		},
+		{
+			"fisier":"valentinesday3.jpg",
+			"descriere":"Escape and breathe the air of new places together.",
+			"alt":"poza",
+			"luni":["februarie"],
+			"zile":[14]
+		},
+		{
+			"fisier":"gs4.jpg",
+			"descriere":"India"
+		},
+		{
+			"fisier":"valentinesday4.jpg",
+			"descriere":"A wedding without a honeymoon is like a birthday without the cake. – Virginia Andrews",
+			"alt":"poza",
+			"luni":["februarie"],
+			"zile":[14]
+		},
+		{
+			"fisier":"gs5.jpg",
+			"descriere":"The magic of Jordan"
+		},
+		{
+			"fisier":"valentinesday5.jpg",
+			"descriere":"As soon as I saw you, I knew you would be an adventure of a lifetime. – Winnie the Pooh",
+			"alt":"poza",
+			"luni":["februarie"],
+			"zile":[14]
+		},
+		{
+			"fisier":"gs6.jpg",
+			"descriere":"The magic of Jordan"
+		}
+	]
+}

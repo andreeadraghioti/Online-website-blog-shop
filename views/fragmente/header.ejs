@@ -1,0 +1,77 @@
+<header>
+    <button id="tema" title="Change Theme">&ensp;<i class= "fa-solid fa-lightbulb"></i>&ensp;</button>
+    <script>
+        temacurenta=localStorage.getItem("tema")
+        if(temacurenta)
+            document.body.classList.add(temacurenta);
+        document.getElementById("tema").onclick=function(){
+            if(document.body.classList.contains("dark")){
+                document.body.classList.remove("dark");
+                localStorage.removeItem("tema");
+            }
+            else{
+                document.body.classList.add("dark");
+                localStorage.setItem("tema","dark");
+            }
+    }
+    </script>
+
+    <!-- <div class="titlu"></div> -->
+    <div class="logoheader"><img src="/resurse/images/logoheader.png"/></div>
+    <!-- <div class="titlu"></div> -->
+    <nav>
+
+        <label id="hamburger" for="ch-menu">
+            <img src="/resurse/images/hamburger_icon.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+
+        <ul class="meniu">
+            <li><div>ABOUT</div>
+            <ul>
+                <li><a href="/index#meettheauthor">Meet the Author</a></li>
+                <li><a href="/index#thegoalofthistravelblog">The Goal of this Blog</a></li>
+            </ul></li>
+            <li><div>SHOP</div>
+                <ul>
+                    <li><a href="/produse">All</a></li>
+                    <li><a href="/produse?tip=book">Books</a></li>
+                    <li><a href="/produse?tip=map">Maps</a></li>
+                    <li><a href="/index#faq">FAQs</a></li>
+                </ul></li>
+            <li><div>BLOG</div>
+            <ul>
+                <li><a href="/index#portraitsofindia">Portraits of India</a></li>
+                <li><a href="/index#hundertwasserexperience">Hundertwasser</a></li>
+                <li><a href="/index#southwesterndesertofjordan">Desert of Jordan</a></li> <!--imi taie asta din submeniu ???-->
+            </ul></li>
+            <li><div>RESOURCES</div>
+            <ul>
+                <li><a href="/index#getaccomodation">Get Accomodation</a></li>
+                <li><a href="/index#transportation">Transportation</a></li>
+                <li><a href="/index#tourcompanies">Tour Companies</a></li>
+            </ul></li>
+            <li><div>GALLERY</div>
+            <ul>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/index#galerie-animata">Postcards</a></li>
+            </ul></li>
+            <li><a href="/index#cinematictravel">CINEMATIC TRAVEL</a></li>
+            <li><a href="/index#calendar">CALENDAR</a></li>
+        </ul>
+    </nav>
+
+</header>
+<p style="text-align: center;" id="banner">This is a school project.<br><span id="mesaj-cookies"></span>This website uses cookies to ensure the best experience on our site <i class="fa-solid fa-cookie-bite"></i><br><button id="ok_cookies">&ensp;OK&ensp;</button><span></span></p>
+<script>
+    if (getCookie("acceptat_banner")){
+        document.getElementById("banner").style.display="none";
+        document.querySelector("main").style.filter="none";
+    }
+
+    document.getElementById("ok_cookies").onclick=function(){
+        setCookie("acceptat_banner",true,60000);
+        document.getElementById("banner").style.display="none";
+        document.querySelector("main").style.filter="none";
+    }
+</script>

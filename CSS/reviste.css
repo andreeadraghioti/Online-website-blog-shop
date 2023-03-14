@@ -1,0 +1,20 @@
+.grid-produse{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1rem;
+}
+
+.grid-produse>div:nth-of-type(odd){
+    --culoare=blue;
+    background-color: var(--culoare);
+    padding: 5%;
+}
+.price:hover{
+    /* background-color: lightblue; */
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    from {background-color: inherit;}
+    to {background-color: red; font-weight: bold;}
+  }

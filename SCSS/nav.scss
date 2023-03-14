@@ -1,0 +1,136 @@
+body{
+    --menu-height: 40px;
+    --menu-text-color: antiquewhite;
+    --button-width: 200px;
+    --menu-color: #252525;
+    --menu-color-selected:#252525;
+    --menu-text-color-selected: #f97950;
+    --menu-bord-width:1px;
+    --menu-button-border-color:#252525;
+    --menu-border-radius-size: 8px;
+
+}
+ul.meniu{
+    display: flex;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    position: absolute;
+    /* top: 14%;
+    left: 49%; */
+    /* transform: translate(-50%, -50%); */
+    justify-content: center;
+    width: 100%;
+    li{
+        a{
+            display: block;
+            height: 100%;
+        }
+    }
+    >li{
+        height: var(--menu-height);
+        overflow: hidden;
+        line-height: var(--menu-height);
+        vertical-align: middle;
+        /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+        /* border-bottom-right-radius: var(--menu-border-radius-size);
+        border-bottom-left-radius: var(--menu-border-radius-size);
+        border-top-right-radius: var(--menu-border-radius-size);
+        border-top-left-radius: var(--menu-border-radius-size);
+        border-collapse: separate; */
+        width: var(--button-width);
+        text-align: center;
+        &:hover{
+            overflow: visible;
+            ul{
+                animation-name: animatiesubmeniu;
+                animation-duration: 0.7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                transform-origin: 50% 0;
+                opacity: 0.5;
+                display: block;
+            }
+        }
+    }
+    ul{
+        list-style-type: none;
+        z-index: 10px;
+        position: relative;
+        left:-1px;
+        padding: 0;
+        margin: 0;
+        transform: scale(0, 0);
+        display: none;
+        li{
+            height: var(--menu-height);
+            /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+            width: var(--button-width);
+        }
+    }
+    a{
+        @extend %a_div;
+        &:hover{
+            @extend %a_div_hover;
+        }
+    }
+    div{
+        @extend %a_div;
+        &:hover{
+            @extend %a_div_hover;
+        }
+    }
+}
+
+%a_div{
+    color: var(--menu-text-color);
+    text-decoration: none;
+    background-color: var(--menu-color);
+    cursor: pointer;
+    font-weight: bold;
+    /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+    /* border-bottom-right-radius: var(--menu-border-radius-size);
+    border-bottom-left-radius: var(--menu-border-radius-size);
+    border-top-right-radius: var(--menu-border-radius-size);
+    border-top-left-radius: var(--menu-border-radius-size);
+    border-collapse: separate; */
+}
+
+%a_div_hover{
+    background-color: var(--menu-color-selected);
+    color:var(--menu-text-color-selected);
+    transition: color 1s linear;
+    font-weight: bold;
+    /* border: var(--menu-bord-width) solid var(--menu-button-border-color); */
+    /* border-bottom-right-radius: var(--menu-border-radius-size);
+    border-bottom-left-radius: var(--menu-border-radius-size);
+    border-top-right-radius: var(--menu-border-radius-size);
+    border-top-left-radius: var(--menu-border-radius-size);
+    border-collapse: separate; */
+}
+
+@keyframes animatiesubmeniu{
+    50%{
+        transform: scale(1, 1);
+    }
+    100%{
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+nav{
+    height:var(--menu-height);
+    background-color: var(--menu-color);
+    display: flex;
+    /* overflow: visible;
+    position: relative;
+    width: 100vw;
+    top:0;
+    position:fixed; */
+}
+
+#hamburger, #ch-menu{
+    display: none;
+}
